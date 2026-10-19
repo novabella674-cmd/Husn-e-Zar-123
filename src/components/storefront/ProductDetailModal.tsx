@@ -43,7 +43,7 @@ export const ProductDetailModal: React.FC<Props> = ({
       return;
     }
     onAddToCart(product, quantity, selectedShade || undefined);
-    addToast('success', 'Added to Cart', `${quantity}x ${product.name} added to your bag.`);
+    addToast('success', 'Added to Cart', `${quantity}x ${product.name} added to your cart.`);
     onClose();
   };
 
@@ -185,7 +185,7 @@ export const ProductDetailModal: React.FC<Props> = ({
                   }`}
                 >
                   <ShoppingBag className="w-4 h-4" />
-                  {product.stockQuantity <= 0 ? 'Out of Stock' : 'Add to Bag'}
+                  {product.stockQuantity <= 0 ? 'Out of Stock' : 'Add to Cart'}
                 </button>
 
                 <button

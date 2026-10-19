@@ -89,7 +89,7 @@ export const Storefront: React.FC<Props> = ({
     setCartItems((prev) =>
       prev.filter((item) => !(item.product.id === productId && item.shade === shade))
     );
-    addToast('info', 'Item Removed', 'Product removed from your shopping bag.');
+    addToast('info', 'Item Removed', 'Product removed from your cart.');
   };
 
   const handleClearCart = () => {
@@ -237,13 +237,13 @@ export const Storefront: React.FC<Props> = ({
               )}
             </button>
 
-            {/* Shopping Bag */}
+            {/* Shopping Cart */}
             <button
               onClick={() => setIsCartOpen(true)}
               className="relative p-2.5 bg-amber-950 text-amber-100 hover:bg-amber-900 rounded-2xl transition-all shadow-sm flex items-center gap-2"
             >
               <ShoppingBag className="w-4 h-4 text-amber-400" />
-              <span className="text-xs font-bold hidden sm:inline">Bag</span>
+              <span className="text-xs font-bold hidden sm:inline">Cart</span>
               {totalCartCount > 0 && (
                 <span className="w-5 h-5 bg-amber-500 text-amber-950 rounded-full text-xs font-extrabold flex items-center justify-center">
                   {totalCartCount}
@@ -504,7 +504,7 @@ export const Storefront: React.FC<Props> = ({
                       <button
                         onClick={() => {
                           handleAddToCart(item, 1);
-                          addToast('success', 'Moved to Bag', `${item.name} added to cart.`);
+                          addToast('success', 'Moved to Cart', `${item.name} added to cart.`);
                         }}
                         className="px-3 py-1.5 bg-amber-900 text-amber-100 text-xs font-semibold rounded-xl"
                       >
@@ -558,7 +558,7 @@ export const Storefront: React.FC<Props> = ({
         onClose={() => setIsAIAdvisorOpen(false)}
         onAddToCart={(p) => {
           handleAddToCart(p, 1);
-          addToast('success', 'Added to Bag', `${p.name} added to cart.`);
+          addToast('success', 'Added to Cart', `${p.name} added to cart.`);
         }}
       />
 

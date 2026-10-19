@@ -193,7 +193,7 @@ export const CartDrawer: React.FC<Props> = ({
             <div className="flex items-center gap-2">
               <ShoppingBag className="w-5 h-5 text-amber-400" />
               <h2 className="text-lg font-serif font-bold">
-                {checkoutStep === 'cart' && `Your Shopping Bag (${cartItems.length})`}
+                {checkoutStep === 'cart' && `Your Shopping Cart (${cartItems.length})`}
                 {checkoutStep === 'checkout' && 'Shipping & Payment'}
                 {checkoutStep === 'success' && 'Order Placed!'}
               </h2>
@@ -232,7 +232,7 @@ export const CartDrawer: React.FC<Props> = ({
                   <div className="h-full flex flex-col items-center justify-center text-center p-6 text-neutral-400">
                     <ShoppingBag className="w-12 h-12 stroke-1 mb-3 text-neutral-300" />
                     <p className="font-serif text-lg font-medium text-neutral-700">
-                      Your bag is empty
+                      Your cart is empty
                     </p>
                     <p className="text-xs text-neutral-500 mt-1">
                       Explore our botanical elixirs and royal cosmetics to get started.
